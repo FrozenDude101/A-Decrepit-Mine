@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <title>A Decrepit Mine</title>
+    <link rel="stylesheet" href="style.css"> 
+    <link id="themeCSS" rel="stylesheet" href="dark.css">
+    <script src="main.js" charset="utf-8" type="text/javascript" defer></script>
+  </head>
+
+  <body>        
+
+        <header>
+            <div id=headerContainer>
+                <span id="title">A Decrepit Mine</span>
+                <button class=screenButton id=cavernButton onclick="setScreen('cavern')">Cavern</button>
+                <button class=screenButton id=ascentButton onclick="setScreen('ascent')">Ascent</button>
+                <button class=screenButton id=descentButton onclick="setScreen('descent')">Descent</button>
+            </div>
+        </header>
+
+        <div class=gameContainer>
+
+            <div class=screenContainer id=cavernContainer>
+
+                <div class=container id=machineContainer>
+                    <span class=containerTitle>Machines</span>
+                    <div class=content id=machines></div>
+                </div>
+
+                <div class=container id=cavernImageContainer>
+                    <span class=containerTitle>Cavern</span>
+                    <div class=content id=cavernImage></div>
+                </div>
+
+                <div class=container id=inventoryContainer>
+                    <span class=containerTitle>Inventory</span>
+                    <div class=content id=inventory></div>
+                </div>
+
+            </div>
+
+            <div class=screenContainer id=ascentContainer>
+
+            </div>
+            
+            <div class=screenContainer id=descentContainer>
+
+            </div>
+
+            <div class=container id=consoleContainer>
+                    <span class=containerTitle>Console</span>
+                    <div class=content id=console></div>
+            </div>
+
+            <div class=container id=actionsContainer>
+                <span class=containerTitle>Actions</span>
+                <div class=content id=actions>
+                    <button class="actionButton transition" id=action1></button>
+                    <button class="actionButton transition" id=action2></button>
+                </div>
+            </div>
+
+            <!--<footer></footer>-->
+
+        </div>
+
+      <footer>      
+        <button onclick="setTheme()">Theme: <span id=themeText>Dark</span></button>
+        <button onclick="saveGame()">Save</button>
+        <button onclick="resetGame()">Reset</button>
+      </footer>
+
+  </body>
+
+</html>
