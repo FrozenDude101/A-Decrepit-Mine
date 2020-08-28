@@ -223,8 +223,8 @@ function getDefaults() {
         "ascentUnlocked": true,
         "descentUnlocked": true,
 
-        "scale": (gameData.scale in [null, NaN]) ? 0 : gameData.scale,
-        "theme": (gameData.theme in [null, NaN]) ? 0 : gameData.theme,
+        "scale": (gameData.scale in [null, NaN]) ? gameData.scale : 0,
+        "theme": (gameData.theme in [null, NaN]) ? gameData.theme : 0,
         // Personal prefrences aren't reset, as these will likely just be set back again.
 
         "version": "0.1",
