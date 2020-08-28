@@ -150,13 +150,13 @@ function setScale(scale=NaN) {
             body.style.zoom = 1;
             bodyScale = Math.min(body.offsetHeight/720, body.offsetWidth/1280);
             break;
-        case 2:
+        case 1:
             document.getElementById("scaleText").innerHTML = "Normal";
-            bodyScale = 0
-            break;
-        case 3:
-            document.getElementById("scaleText").innerHTML = "Large";
             bodyScale = 1
+            break;
+        case 2:
+            document.getElementById("scaleText").innerHTML = "Large";
+            bodyScale = 2
             break;
     }
     body.style.zoom = bodyScale;
