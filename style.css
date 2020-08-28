@@ -1,3 +1,17 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+
+    margin: 0;
+
+    zoom: 1;
+}
+
 header {
     position: absolute;    
     top: 0;
@@ -116,21 +130,21 @@ header button.active {
     transition: none !important;
 }
 
-#cavernImageContainer {   
+#consoleContainer {
     position: absolute;
     top: 60px;
     left: 20px;
 
-    height: 268px;
+    height: 468px;
     width: 400px;
 }
 
-#inventoryContainer {   
+#actionsContainer {
     position: absolute;
-    top: 380px;
+    top: 580px;
     left: 20px;
 
-    height: 268px;
+    height: 68px;
     width: 400px;
 }
 
@@ -163,21 +177,21 @@ header button.active {
     width: 400px;
 }
 
-#consoleContainer {
+#cavernImageContainer {   
     position: absolute;
     top: 60px;
     left: 860px;
 
-    height: 468px;
+    height: 268px;
     width: 400px;
 }
 
-#actionsContainer {
+#inventoryContainer {   
     position: absolute;
-    top: 580px;
+    top: 380px;
     left: 860px;
 
-    height: 68px;
+    height: 268px;
     width: 400px;
 }
 

@@ -89,8 +89,9 @@ function setScreen(screen) {
 }
 
 function setTheme(theme=NaN) {
-    // Handles changing the theme.
+    console.log(theme);
     if (isNaN(theme)) {
+        // Handles changing the theme.
         gameData.theme += 1;
         if (gameData.theme === 2) {
             gameData.theme = 0;
@@ -124,6 +125,49 @@ function setTheme(theme=NaN) {
     // Restarts all transitions after a short break, which stops them from happening on theme change.
 }
 
+function setScale(scale=NaN) {
+    if (isNaN(scale)) {
+        // Handles changing the scale.
+        gameData.scale += 1;
+        if (gameData.scale === 3) {
+            gameData.scale = 0;
+        }
+    } else {
+        gameData.scale = scale;
+    }
+    // Increments the scale counter if called without an argument, otherwise sets it directly.
+
+    for (actionButton of document.getElementsByClassName("transition")) {
+        actionButton.classList.add("notransition");
+    }
+    // Pauses all transitions.
+
+    var body = document.getElementsByTagName("body")[0];
+    var bodyScale;
+    switch (gameData.scale) {
+        case 0:
+            document.getElementById("scaleText").innerHTML = "Auto";
+            body.style.zoom = 1;
+            bodyScale = Math.min(body.offsetHeight/720, body.offsetWidth/1280);
+            break;
+        case 2:
+            document.getElementById("scaleText").innerHTML = "Normal";
+            bodyScale = 0
+            break;
+        case 3:
+            document.getElementById("scaleText").innerHTML = "Large";
+            bodyScale = 1
+            break;
+    }
+    body.style.zoom = bodyScale;
+
+    setTimeout(function() {
+        for (actionButton of document.getElementsByClassName("transition")) {
+            actionButton.classList.remove("notransition");
+    }}, 10);
+    // Restarts all transitions after a short break, which stops them from happening on theme change.
+}
+
 function saveGame() {
     // Handles saving the game data.
     localStorage.setItem("ADecrepitMineSave", JSON.stringify(gameData));
@@ -135,6 +179,12 @@ function loadGame() {
     if (savegame !== null) {
         var defaults = getDefaults();
         gameData = savegame;
+        switch(gameData.version) {
+            case null:
+                gameData.version = "0.1";
+            case "0.1":
+                gameData.scale = 0;
+        }        
         setValues();
     } else {
         resetGame();
@@ -173,14 +223,18 @@ function getDefaults() {
         "ascentUnlocked": true,
         "descentUnlocked": true,
 
-        "theme": (gameData.theme === null) ? 0 : gameData.theme,
+        "scale": (gameData.scale in [null, NaN]) ? 0 : gameData.scale,
+        "theme": (gameData.theme in [null, NaN]) ? 0 : gameData.theme,
         // Personal prefrences aren't reset, as these will likely just be set back again.
+
+        "version": "0.1",
     };
 }
 
 function setValues() {
     // Handles setting values to appear as there were when saved.
     setScreen("cavern");
+    setScale(scale=gameData.scale);
     setTheme(theme=gameData.theme);
     // Sets the major tab, and theme.
 
