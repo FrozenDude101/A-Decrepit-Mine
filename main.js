@@ -178,15 +178,15 @@ function loadGame() {
     var savegame = JSON.parse(localStorage.getItem("ADecrepitMineSave"));
     if (savegame !== null) {
         var defaults = getDefaults();
-        resetGame();
         gameData = savegame;
         switch(gameData.version) {
             case null:
                 gameData.version = "0.1";
             case "0.1":
                 gameData.scale = 0;
-        }        
+        }  
         setValues();
+        resetGame();
     } else {
         resetGame();
     }
