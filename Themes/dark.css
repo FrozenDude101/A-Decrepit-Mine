@@ -1,1 +1,24 @@
+body {
+    background-color: #242424;
+    color: white;
+}
 
+header {
+    background-color: #121212;
+}
+
+.actionButton {
+    background-color: #363636;
+}
+
+.machineProgressBar {
+    border-color: #363636;
+}
+
+.machineProgressFill {
+    background-color: #363636;
+}
+
+footer {
+    background-color: #121212;
+}
