@@ -1,1 +1,104 @@
+#gameContainer {
+    position: absolute;
+    top: calc(50% - 360px);
+    left: calc(50% - 640px);
 
+    height: 720px;
+    width: 1280px;
+}
+
+header {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+    height: 45px;
+    width: 100%;
+
+    text-align: center;
+}
+
+header span  {
+    position: relative;
+    top: 5px;
+
+    padding: 0px 95px 0px 50px;
+
+    font-size: 30px;
+}
+/* The title. */
+
+.tabButton {
+    position: relative;
+    top: 5px;
+
+    margin: 0px 5px 0px 5px;
+    outline: none;
+    border: none;
+    padding: 0px 5px 0px 5px;
+
+    background-color: inherit;
+    color: inherit;
+
+    font-family: "Times New Roman", Times, serif;
+    font-size: 30px;
+}
+
+.tabButton:hover {
+    text-decoration: underline;
+}
+
+.tabButton.active {
+    text-decoration: underline;
+}
+
+#storyContainer {
+    position: absolute;
+    top: 65px;
+    left: 20px;
+}
+
+.actionButton {
+    display: block;
+
+    height: 30px;
+    width: 400px;
+
+    outline: none;
+    border: none;
+
+    color: inherit;
+}
+
+#console {
+    height: 540px;
+    width: 400px;
+
+    text-align: center;
+}
+
+.message {
+    width: 400px;
+
+    margin: 15px 0px;
+}
+
+.screenContainer {
+    position: absolute;
+    top: 65px;
+    left: 440px;
+
+    height: 600px;
+    width: 820px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+
+    height: 35px;
+    width: 100%;
+
+    text-align: right;
+}

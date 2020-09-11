@@ -1,0 +1,41 @@
+.machineContainer {
+    height: 80px;
+    width: 400px;
+    
+    margin-bottom: 24px;
+}
+
+.machineContainer img {
+    height: 100%;
+    width: 80px;
+}
+
+.machineProgressBar {
+    position: relative;
+    top: -84px;
+    left: 100px;
+
+    height: 70px;
+    width: 298px;
+
+    border: 5px solid;
+    border-radius: 10px;
+}
+
+.machineProgressFill {
+    height: inherit;
+    width: 50%;
+}
+
+.machineButton {
+    position: relative;
+    top: -80px;
+
+    height: 100%;
+    width: 100%;
+
+    outline: none;
+    border: none;
+
+    background-color: transparent;
+}
