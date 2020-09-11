@@ -62,54 +62,54 @@ function getDefaults() {
                 "rate": 0,
             },
             "pump": {
-                "level": 0,
+                "level": 1,
                 "enabled": false,
                 "rate": 0,
             },
             
             "dynamo": {
-                "level": 0,
+                "level": 1,
                 "enabled": false,
                 "multiplier": 0,
             },
 
             "drill": {
-                "level": 0,
+                "level": 1,
                 "enabled": false,
                 "progress": 0,
                 "rewards": {//TODO ADD THE BLANK REWARD TABLE.
                 },
             },
             "refiner": {
-                "level": 0,
+                "level": 1,
                 "enabled": false,
                 "progress": 0,
             },
             "scienceBay": {
-                "level": 0,
+                "level": 1,
                 "enabled": false,
                 "progress": 0,
             },
             
             "battery": {
-                "level": 0,
+                "level": 1,
                 "enabled": false,
                 "maxStorage": 0,
                 "stored": 0,
             },            
             "tank": {
-                "level": 0,
+                "level": 1,
                 "enabled": false,
                 "maxStorage": 0,
                 "stored": 0,
             },
 
             "conveyour": {
-                "level": 0,
+                "level": 1,
                 "enabled": false,
             },
             "lights": {
-                "level": 0,
+                "level": 1,
                 "enabled": false,
             },
         },
