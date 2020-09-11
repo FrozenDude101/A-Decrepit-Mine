@@ -51,7 +51,7 @@ function getDefaults() {
                 "progress": 0,
                 "blueprint": {
                     "name": "",
-                    "cost": new Resources(),
+                    "cost": new Resource(),
                     "event": "",
                 }
             },
@@ -115,7 +115,7 @@ function getDefaults() {
         },
         // Each machine and its values.
 
-        "inventory": new Resources(),
+        "inventory": new Resource(),
         // The inventory.
         
         "theme": (gameData.theme) ? gameData.theme : 0,
