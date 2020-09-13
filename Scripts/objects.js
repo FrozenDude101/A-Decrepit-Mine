@@ -1,20 +1,34 @@
 class Resource {
     constructor (resources) {
-        // TODO, FOR EACH RESOURCE, ASSIGN IT TO THE CLASS.
+        this.stone = resources[0];
     }
 
     add (resources) {
-        // TODO, ADD ALL OF ONE RESOURCE TO ANOTHER.
-        return new Resources ();
+        var newResources = [];
+        for (key of Object.keys(this)) {
+            newResources.push(this[key]+resources[key])
+        }
+        return new Resources (newResources);
     }
 
     subtract (resources) {
-        // TODO, SUBTRACT ALL OF ONE RESOURCE TO ANOTHER.
-        return new Resources ();
+        var newResources = [];
+        for (key of Object.keys(this)) {
+            newResources.push(this[key]-resources[key])
+        }
+        return new Resources (newResources);
     }
 
-    bool (resources) {
-        // TODO, CHECK IF ALL RESOURCES ARE <= 0.
-        return true;
+    toBoolean () {
+        return Resource.toBoolean(this);
+    }
+
+    static toBoolean (resources) {
+        for (value of Object.values(resources)) {
+            if (value > 0) {
+                return true;
+            }
+        }
+        return false;
     }
 }

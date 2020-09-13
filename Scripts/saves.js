@@ -51,7 +51,7 @@ function getDefaults() {
                 "progress": 0,
                 "blueprint": {
                     "name": "",
-                    "cost": new Resource(),
+                    "cost": new Resource([0]),
                     "event": "",
                 }
             },
@@ -115,7 +115,7 @@ function getDefaults() {
         },
         // Each machine and its values.
 
-        "inventory": new Resource(),
+        "inventory": new Resource([0]),
         // The inventory.
         
         "theme": (gameData.theme) ? gameData.theme : 0,
@@ -127,7 +127,8 @@ function getDefaults() {
 
 function setValues() {
     // Handles setting values to appear as there were when saved.
-    setTab("cavern");
+    setTab("cavern");    
+    setMachineTab(null);
     setTheme(theme=gameData.theme);
     // Sets the major tab, and theme.
 

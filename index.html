@@ -34,21 +34,21 @@
                 <div id=console></div>
             </div>
 
-            <div class=screenContainer id=studioContainer>
+            <div class=tabContainer id=studioContainer>
 
             </div>
 
-            <div class=screenContainer id=cavernContainer>
+            <div class=tabContainer id=cavernContainer>
 
             </div>
 
-            <div class=screenContainer id=machinesContainer>
+            <div class=tabContainer id=machinesContainer>
 
                 <div class=machineContainer id=fabricatorContainer>
                     <img src="Images/fabricator.png">
                     <div class=machineProgressBar>
                         <div class=machineProgressFill></div>
-                        <button class=machineButton onclick="console.log('fabricator')"></button>
+                        <button class=machineButton onclick="setMachineTab('fabricator')"></button>
                     </div>
                 </div>
 
@@ -56,7 +56,7 @@
                     <img src="Images/generator.png">
                     <div class=machineProgressBar>
                         <div class=machineProgressFill></div>
-                        <button class=machineButton onclick="console.log('generator')"></button>
+                        <button class=machineButton onclick="setMachineTab('generator')"></button>
                     </div>
                 </div>
 
@@ -64,7 +64,7 @@
                     <img src="Images/drill.png">
                     <div class=machineProgressBar>
                         <div class=machineProgressFill></div>
-                        <button class=machineButton onclick="console.log('drill')"></button>
+                        <button class=machineButton onclick="setMachineTab('drill')"></button>
                     </div>
                 </div>
 
@@ -72,7 +72,7 @@
                     <img src="Images/refiner.png">
                     <div class=machineProgressBar>
                         <div class=machineProgressFill></div>
-                        <button class=machineButton onclick="console.log('refiner')"></button>
+                        <button class=machineButton onclick="setMachineTab('refiner')"></button>
                     </div>
                 </div>
 
@@ -80,7 +80,7 @@
                     <img src="Images/pump.png">
                     <div class=machineProgressBar>
                         <div class=machineProgressFill></div>
-                        <button class=machineButton onclick="console.log('pump')"></button>
+                        <button class=machineButton onclick="setMachineTab('pump')"></button>
                     </div>
                 </div>
 
@@ -88,17 +88,36 @@
                     <img src="Images/science bay.png">
                     <div class=machineProgressBar>
                         <div class=machineProgressFill></div>
-                        <button class=machineButton onclick="console.log('science bay')"></button>
+                        <button class=machineButton onclick="setMachineTab('scienceBay')"></button>
                     </div>
+                </div>
+
+                <div class=machineTab id=fabricatorTab>
+                    Fabricator
+                </div>
+                <div class=machineTab id=generatorTab>
+                    Generator
+                </div>
+                <div class=machineTab id=drillTab>
+                    Drill
+                </div>
+                <div class=machineTab id=refinerTab>
+                    Refiner
+                </div>
+                <div class=machineTab id=pumpTab>
+                    Pump
+                </div>
+                <div class=machineTab id=scienceBayTab>
+                    Science Bay
                 </div>
 
             </div>
 
-            <div class=screenContainer id=ascentContainer>
+            <div class=tabContainer id=ascentContainer>
 
             </div>
 
-            <div class=screenContainer id=descentContainer>
+            <div class=tabContainer id=descentContainer>
 
             </div>
 

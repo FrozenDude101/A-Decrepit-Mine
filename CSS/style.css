@@ -56,6 +56,9 @@ header span  {
     position: absolute;
     top: 65px;
     left: 20px;
+
+    height: 600px;
+    width: 400px;
 }
 
 .actionButton {
@@ -83,13 +86,13 @@ header span  {
     margin: 15px 0px;
 }
 
-.screenContainer {
+.tabContainer {
     position: absolute;
     top: 65px;
     left: 440px;
 
     height: 600px;
-    width: 820px;
+    width: 820px; 
 }
 
 footer {

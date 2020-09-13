@@ -51,18 +51,18 @@ function output(html) {
     // Sets the opacity of the newly created message.    
 }
 
-function setTab(screen) {
+function setTab(tab) {
     // Handles changing the screen between the major tabs.
-    for (let container of document.getElementsByClassName("screenContainer")) {
+    for (let container of document.getElementsByClassName("tabContainer")) {
         container.style.display = "none";
     }
-    document.getElementById(screen+"Container").style.display = "block";
+    document.getElementById(tab+"Container").style.display = "block";
     // Sets all screen containers to invisible, then reveals the specified screen.
 
     for (let button of document.getElementsByClassName("tabButton")) {
         button.classList.remove("active")
     }
-    document.getElementById(screen+"TabButton").classList.add("active")
+    document.getElementById(tab+"TabButton").classList.add("active")
     // Removes "active" class from all screen buttons, then adds it to the specified button.
 }
 
