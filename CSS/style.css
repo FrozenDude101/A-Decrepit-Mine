@@ -1,3 +1,24 @@
+* {
+    box-sizing: border-box;
+
+    margin: 0;
+    outline: 0;
+    border: 0;
+    padding: 0;
+
+    font-family: "Times New Roman", Times, serif;
+
+    color: var(--text-colour);
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: var(--bg-colour);
+}
+
 #gameContainer {
     position: absolute;
     top: calc(50% - 360px);
@@ -8,100 +29,91 @@
 }
 
 header {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-
-    height: 45px;
+    height: 4.5rem;
     width: 100%;
 
+    margin-bottom: 20px;
+
     text-align: center;
+
+    background-color: var(--accent-1);
 }
 
-header span  {
-    position: relative;
-    top: 5px;
+#title  {
+    padding: 0.5rem 9.5rem 0.5rem 5rem;
 
-    padding: 0px 95px 0px 50px;
-
-    font-size: 30px;
+    font-size: 3rem;
 }
-/* The title. */
 
 .tabButton {
-    position: relative;
-    top: 5px;
+    height: 100%;
 
-    margin: 0px 5px 0px 5px;
+    margin: 0px 0.5rem;
     outline: none;
     border: none;
-    padding: 0px 5px 0px 5px;
+    padding: 0px 0.5rem;
+
+    font-size: 3rem;
 
     background-color: inherit;
-    color: inherit;
 
-    font-family: "Times New Roman", Times, serif;
-    font-size: 30px;
+    display: none;
 }
 
-.tabButton:hover {
-    text-decoration: underline;
-}
-
-.tabButton.active {
+.tabButton:hover, .tabButton.active {
     text-decoration: underline;
 }
 
 #storyContainer {
-    position: absolute;
-    top: 65px;
-    left: 20px;
+    float: left;
 
     height: 600px;
     width: 400px;
+
+    margin-left: 20px;
 }
 
 .actionButton {
     display: block;
 
-    height: 30px;
-    width: 400px;
+    height: 3rem;
+    width: 100%;
 
-    outline: none;
-    border: none;
-
-    color: inherit;
+    background-color: var(--accent-2);
 }
 
 #console {
-    height: 540px;
-    width: 400px;
-
-    text-align: center;
+    height: calc(600px - 6rem);
+    width: 100%;
 }
 
 .message {
-    width: 400px;
+    width: 100%;
+    
+    margin: calc(31px - 1.6rem) 0px;
 
-    margin: 15px 0px;
+    font-size: 1.6rem;
 }
 
 .tabContainer {
-    position: absolute;
-    top: 65px;
-    left: 440px;
+    float: right;
 
     height: 600px;
-    width: 820px; 
+    width: 820px;
+
+    margin-right: 20px;
+
+    display: none;
 }
 
 footer {
     position: absolute;
-    bottom: 0px;
-    left: 0px;
+    bottom: 0;
 
-    height: 35px;
+    height: 3.5rem;
     width: 100%;
 
-    text-align: right;
+    margin-top: 20px;
+
+    background-color: var(--accent-1);
 }

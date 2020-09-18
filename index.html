@@ -1,131 +1,128 @@
 <!DOCTYPE html>
 
-<html lang=en dir=ltr>
+<html lang="en" dir="ltr">
 
     <head>
-        <meta charset=utf-8>
+
+        <meta charset="utf-8">
         <title>A Decrepit Mine</title>
-        <script src=Scripts/main.js charset=utf-8 type=text/javascript defer></script>
-        <script src=Scripts/objects.js charset=utf-8 type=text/javascript defer></script>
-        <script src=Scripts/machines.js charset=utf-8 type=text/javascript defer></script>
+
+        <script src=Scripts/main.js charset=utf-8 type=text/javascript></script>
+        <script src=Scripts/machines.js charset=utf-8 type=text/javascript></script>        
+        <script src=Scripts/objects.js charset=utf-8 type=text/javascript></script>
         <script src=Scripts/saves.js charset=utf-8 type=text/javascript defer></script>
-        <link rel=stylesheet href=CSS/style.css>
-        <link rel=stylesheet href=CSS/machines.css> 
-        <link id=themeCSS rel="stylesheet" href=Themes/dark.css>
+
+        <link id="themeCSS" rel="stylesheet" href="Themes/dark.css">
+        <link rel="stylesheet" href="CSS/style.css">
+        <link rel="stylesheet" href="CSS/machines.css">
+
     </head>
 
     <body>
 
         <header>
-                <span>A Decrepit Mine</span>
-                <button class=tabButton id=studioTabButton onclick="setTab('studio')">Studio</button>
-                <button class=tabButton id=cavernTabButton onclick="setTab('cavern')">Cavern</button>
-                <button class=tabButton id=machinesTabButton onclick="setTab('machines')">Machines</button>
-                <button class=tabButton id=ascentTabButton onclick="setTab('ascent')">Ascent</button>
-                <button class=tabButton id=descentTabButton onclick="setTab('descent')">Descent</button>
+            <span id="title">A Decrepit Mine</span>
+            <button class="tabButton" id="studioTabButton"   onclick="setTab('studio')">Studio</button>
+            <button class="tabButton" id="cavernTabButton"   onclick="setTab('cavern')">Cavern</button>
+            <button class="tabButton" id="machinesTabButton" onclick="setTab('machines')">Machines</button>
+            <button class="tabButton" id="ascentTabButton"   onclick="setTab('ascent')">Ascent</button>
+            <button class="tabButton" id="descentTabButton"  onclick="setTab('descent')">Descent</button>
         </header>
 
-        <div id=gameContainer>
+        <div id="gameContainer">
             <header></header>
 
-            <div id=storyContainer>
-                <button class=actionButton id=action1 onclick="outputMessage({msg:'Test'})">Action1</button>
-                <button class=actionButton id=action2>Action2</button>
-                <div id=console></div>
+            <div id="storyContainer">
+                <button class="actionButton" id="action1" onclick=""></button>
+                <button class="actionButton" id="action2" onclick=""></button>
+                <div id="console"></div>
             </div>
 
-            <div class=tabContainer id=studioContainer>
-
+            <div class="tabContainer" id="studioContainer">
+                Studio
             </div>
 
-            <div class=tabContainer id=cavernContainer>
-
+            <div class="tabContainer" id="cavernContainer">
+                Cavern
             </div>
 
-            <div class=tabContainer id=machinesContainer>
+            <div class="tabContainer" id="machinesContainer">
 
-                <div class=machineContainer id=fabricatorContainer>
-                    <img src="Images/fabricator.png">
-                    <div class=machineProgressBar>
-                        <div class=machineProgressFill></div>
-                        <button class=machineButton onclick="setMachineTab('fabricator')"></button>
-                    </div>
+                <div class="machineContainer" id="fabricatorContainer">
+                    <img class="icon machine" src="Images/fabricator.png">
+                    <button class="machineTabButton" id="fabricatorTabButton" onclick="setMachineTab('fabricator')"></button>
+                    <div class="machineTabFill" id="fabricatorTabFill"></div>
                 </div>
 
-                <div class=machineContainer id=generatorContainer>
-                    <img src="Images/generator.png">
-                    <div class=machineProgressBar>
-                        <div class=machineProgressFill></div>
-                        <button class=machineButton onclick="setMachineTab('generator')"></button>
-                    </div>
+                <div class="machineContainer" id="generatorContainer">
+                    <img class="icon machine" src="Images/generator.png">
+                    <div class="machineTabButton" id="generatorTabButton" onclick="setMachineTab('generator')"></div>
+                    <div class="progressFill machine"></div>
                 </div>
 
-                <div class=machineContainer id=drillContainer>
-                    <img src="Images/drill.png">
-                    <div class=machineProgressBar>
-                        <div class=machineProgressFill></div>
-                        <button class=machineButton onclick="setMachineTab('drill')"></button>
-                    </div>
+                <div class="machineContainer" id="drillContainer">
+                    <img class="icon machine" src="Images/drill.png">
+                    <div class="machineTabButton" id="drillTabButton" onclick="setMachineTab('drill')"></div>
+                    <div class="progressFill machine"></div>
                 </div>
 
-                <div class=machineContainer id=refinerContainer>
-                    <img src="Images/refiner.png">
-                    <div class=machineProgressBar>
-                        <div class=machineProgressFill></div>
-                        <button class=machineButton onclick="setMachineTab('refiner')"></button>
-                    </div>
+                <div class="machineContainer" id="refinerContainer">
+                    <img class="icon machine" src="Images/refiner.png">
+                    <div class="machineTabButton" id="refinerTabButton" onclick="setMachineTab('refiner')"></div>
+                    <div class="progressFill machine"></div>
+                </div>
+                
+                <div class="machineContainer" id="pumpContainer">
+                    <img class="icon machine" src="Images/pump.png">
+                    <div class="machineTabButton" id="pumpTabButton" onclick="setMachineTab('pump')"></div>
+                    <div class="progressFill machine"></div>
                 </div>
 
-                <div class=machineContainer id=pumpContainer>
-                    <img src="Images/pump.png">
-                    <div class=machineProgressBar>
-                        <div class=machineProgressFill></div>
-                        <button class=machineButton onclick="setMachineTab('pump')"></button>
-                    </div>
+                <div class="machineContainer" id="scienceBayContainer">
+                    <img class="icon machine" src="Images/scienceBay.png">
+                    <div class="machineTabButton" id="scienceBayTabButton" onclick="setMachineTab('scienceBay')"></div>
+                    <div class="progressFill machine"></div>
                 </div>
 
-                <div class=machineContainer id=scienceBayContainer>
-                    <img src="Images/science bay.png">
-                    <div class=machineProgressBar>
-                        <div class=machineProgressFill></div>
-                        <button class=machineButton onclick="setMachineTab('scienceBay')"></button>
-                    </div>
+                <div class="machineTab" id="fabricatorTab">
+                    
                 </div>
 
-                <div class=machineTab id=fabricatorTab>
-                    Fabricator
+                <div class="machineTab" id="generatorTab">
+
                 </div>
-                <div class=machineTab id=generatorTab>
-                    Generator
+
+                <div class="machineTab" id="drillTab">
+
                 </div>
-                <div class=machineTab id=drillTab>
-                    Drill
+
+                <div class="machineTab" id="refinerTab">
+
                 </div>
-                <div class=machineTab id=refinerTab>
-                    Refiner
+
+                <div class="machineTab" id="pumpTab">
+
                 </div>
-                <div class=machineTab id=pumpTab>
-                    Pump
-                </div>
-                <div class=machineTab id=scienceBayTab>
-                    Science Bay
+
+                <div class="machineTab" id="scienceBayTab">
+
                 </div>
 
             </div>
 
-            <div class=tabContainer id=ascentContainer>
-
+            <div class="tabContainer" id="ascentContainer">
+                Ascent
             </div>
 
-            <div class=tabContainer id=descentContainer>
-
+            <div class="tabContainer" id="descentContainer">
+                Descent
             </div>
 
             <footer></footer>
         </div>
 
         <footer>
-            <button onclick="setTheme()">Theme: <span id=themeText>Dark</span></button>
+            <button onclick="setTheme()">Theme: <span id=themeText></span></button>
         </footer>
 
     </body>

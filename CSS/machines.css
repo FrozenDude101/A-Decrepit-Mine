@@ -1,51 +1,63 @@
+#machines {
+    float: left;
+
+    height: 600px;
+    width: 400px;
+}
+
 .machineContainer {
+    position: relative;
+
     height: 80px;
     width: 400px;
-    
+
     margin-bottom: 24px;
+
+    display: none;
 }
 
-.machineContainer img {
-    height: 100%;
-    width: 80px;
-}
-
-.machineProgressBar {
-    position: relative;
-    top: -84px;
-    left: 100px;
-
-    height: 70px;
-    width: 290px;
-
-    border: 5px solid;
-    border-radius: 10px;
-}
-
-.machineProgressFill {
-    height: inherit;
-    width: 50%;
-}
-
-.machineButton {
+.icon.machine {
     position: absolute;
     top: 0px;
     left: 0px;
 
-    height: 100%;
-    width: 100%;
+    height: 80px;
+    width: 80px;
 
-    outline: none;
-    border: none;
+    image-rendering: crisp-edges;
+}
+
+.machineTabButton {
+    position: absolute;
+    top: 0px;
+    left: 100px;
+    z-index: 1;
+
+    height: 80px;
+    width: 300px;
+
+    border: 5px solid var(--accent-2);
+    border-radius: 10px;
+
+    font-size: 2rem;
 
     background-color: transparent;
 }
 
-.machineTab {
+.machineTabButton:hover, .machineTabButton.active {
+    border-color: var(--accent-1);
+}
+
+.machineTabFill {
     position: absolute;
     top: 0px;
-    left: 420px;
+    left: 100px;
+    z-index: 0;
 
-    width: 400px;
-    height: 600px;
+    height: 80px;
+    width: 0px;
+
+    border-radius: 10px;
+
+    background-color: var(--accent-2);
 }

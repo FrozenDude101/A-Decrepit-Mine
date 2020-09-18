@@ -1,24 +1,6 @@
-body {
-    background-color: white;
-    color: black;
-}
-
-header {
-    background-color: #DBDBDB;
-}
-
-.actionButton {
-    background-color: #C9C9C9;
-}
-
-.machineProgressBar {
-    border-color: #C9C9C9;
-}
-
-.machineProgressFill {
-    background-color: #C9C9C9;
-}
-
-footer {
-    background-color: #DBDBDB;
+:root {
+    --text-colour: #000000;
+    --bg-colour: #FFFFFF;
+    --accent-1: #DBDBDB;
+    --accent-2: #B7B7B7;
 }
